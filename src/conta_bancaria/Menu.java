@@ -3,6 +3,7 @@ package conta_bancaria;
 import java.util.Scanner;
 import conta_bancaria.model.Conta;
 import conta_bancaria.model.ContaCorrente;
+import conta_bancaria.model.ContaPoupanca;
 import conta_bancaria.util.Cores;
 
 public class Menu {
@@ -50,6 +51,9 @@ public class Menu {
 		cc1.depositar(2000.00f);
 		cc1.visualizar();
 		
+		ContaPoupanca cp1 = new ContaPoupanca(4, 123, 2, "Daniel", 300000.00f, 15);
+		cp1.visualizar();
+		
 		
 		
 				System.out.println("\n" + Cores.TEXT_YELLOW + Cores.ANSI_BLACK_BACKGROUND 
@@ -74,7 +78,7 @@ public class Menu {
 			opcao = leia.nextInt();
 
 			if (opcao == 0) {
-				System.out.println(Cores.TEXT_WHITE_BOLD + "\nBanco do Brazil com Z - O seu Futuro começa aqui!");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "\nBanco do Brazil - O seu Futuro começa aqui!");
 				sobre();
 				leia.close();
 				System.exit(0);
@@ -83,7 +87,7 @@ public class Menu {
 			switch (opcao) {
 			case 1:
 				System.out.println(Cores.TEXT_WHITE + "Criar Conta\n\n");
-
+				
 				break;
 			case 2:
 				System.out.println(Cores.TEXT_WHITE + "Listar todas as Contas\n\n");
